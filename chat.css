@@ -1,0 +1,246 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+   display: flex;
+   background-color: rgba(241, 139, 170, 0.26);
+   min-height: 100vh;
+   justify-content: center;
+   align-items: center;
+   font-family: sans-serif;
+}
+.container{
+    position: relative;
+    /* width:1200px; */
+    width: 100%;
+    /* height:700px; */
+    height: 100vh;
+    
+    /* height: calc(100vh-40px); */
+    background-color: rgb(49, 168, 168);
+    display: flex;
+}
+.left{
+    position: relative;
+    flex: 30%;
+    background-color: rgb(190, 191, 197);
+    border-right: 2px solid rgb(156, 153, 153);
+}
+.right{
+    position: relative;
+    flex: 70%;
+    background-color: darkseagreen;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(212, 221, 221);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.userImage{
+    position: relative;
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.navLink i{
+    margin-right:20px;
+}
+.search{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ background-color: rgb(241, 232, 232);
+ padding: 0 15px;
+}
+.search div{
+    width: 100%;
+}
+.search div input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 6px;
+    border-radius: 35px;
+    padding-left: 40px;
+}
+.search div i{
+    position: absolute;
+    left:25px;
+    top:18px;
+}
+.chatList{
+    position: relative;
+    height: calc(100% - 100px); /* header ko 50px ra search wala ko 50px jodeko 100 vako */
+    overflow-y: auto;
+    background-color: rgb(240, 240, 238);
+}
+.chatList .block{
+    position: relative;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px 10px ;
+    border-bottom: 1px solid rgb(189, 174, 174);
+    cursor: pointer;
+    height: 80px;
+    
+}
+.chatList .block .imgBox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.chatList .block .detail{
+    position: relative;
+    width: 100%;
+    margin-left: 15px;
+}
+.chatList .block .detail .listHead{
+    position: relative;
+    display: flex;
+    margin-bottom:4px;
+    justify-content: space-between;
+
+   
+}
+.chatList .block .detail .message p{
+    display:  -webkit-box;
+    -webkit-line-clamp: 1;
+    font-size: 0.8rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: rgb(94, 48, 48);
+}
+.header .personName span{
+    font-size: smaller;
+    color: rgba(94, 90, 90, 0.801);
+    opacity: 0.9;
+}
+.chatBox{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 100px); /*header ko 50 + paxi footer lai 50 jodeko */
+    padding: 50px;
+    overflow-y: auto;
+    background-color: white;
+
+}
+.messages {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+.messages p{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background: aliceblue;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+.messages p span{
+    display: block;
+    font-size: 0.80em;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+.ownMsg{
+    justify-content: flex-end;
+}
+.otherMsg{
+    justify-content: flex-start;
+}
+.ownMsg p{
+    /* background-color: rgb(169, 201, 132); */
+    background-color: rgb(154 247 152);
+    text-align: left;
+
+}
+.ownMsg span{
+    text-align: right;
+}
+.otherMsg p{
+    /* background-color: rgb(79, 120, 153); */
+    background-color: rgb(134 191 241);
+    text-align: left;
+}
+.chatInput{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(243, 245, 243, 0.897);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.chatInput .inputGift{
+    position: relative;
+    flex: 20%;
+    /* padding:0 15px; */
+   
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+}
+.chatInput .inputGift i{
+   position: relative;
+   padding: 8px;
+    /* justify-content: space-around; */
+    /* left: 15px; */
+}
+.chatInput .inputText{
+    position: relative;
+
+    flex: 80%;
+    display: flex;
+    /* background-color: rgb(131, 110, 110); */
+}
+.chatInput .inputText i{
+    position: relative;
+     /* justify-content: flex-end; */
+     right: 32px;
+     top: 4px;
+     
+ }
+.chatInput .like{
+    position: relative;
+    display: flex;
+    flex: 5%;
+    justify-content: flex-end;
+    /* background-color: brown; */
+}
+.chatInput input{
+    width: 100%;
+    height: 30px;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    
+}
